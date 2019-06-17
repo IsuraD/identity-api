@@ -44,9 +44,13 @@
                 <groupId>org.wso2.maven.plugins</groupId>
                 <artifactId>swagger2cxf-maven-plugin</artifactId>
                 <version>1.0-SNAPSHOT</version>
+                <!--<configuration>-->
+                    <!--<packageName>association</packageName>-->
+                    <!--<inputSpec>${project.basedir}/src/main/resources/association.yaml</inputSpec>-->
+                <!--</configuration>-->
                 <configuration>
-                    <packageName>association</packageName>
-                    <inputSpec>${project.basedir}/src/main/resources/association.yaml</inputSpec>
+                    <packageName>challenge</packageName>
+                    <inputSpec>${project.basedir}/src/main/resources/challenge.yaml</inputSpec>
                 </configuration>
                 <!--<configuration>-->
                     <!--<packageName>challenge</packageName>-->
@@ -148,6 +152,27 @@
             <artifactId>jackson-jaxrs-json-provider</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.governance</groupId>
+            <artifactId>org.wso2.carbon.identity.recovery</artifactId>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.ws.rs</groupId>
+                    <artifactId>jsr311-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.wso2.carbon.identity.framework</groupId>-->
+            <!--<artifactId>org.wso2.carbon.identity.application.common</artifactId>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.wso2.carbon.identity.framework</groupId>-->
+            <!--<artifactId>org.wso2.carbon.identity.base</artifactId>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
     </dependencies>
 
 </project>

@@ -8,6 +8,8 @@
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
             <bean class="org.wso2.carbon.identity.rest.api.endpoint.association.UsersApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.endpoint.challenge.ChallengesApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.endpoint.challenge.UsersApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
